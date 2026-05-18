@@ -3,7 +3,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/tomcollis/Tempidoc?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/tomcollis/Tempidoc?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/issues)
-[![Github All Releases download count](https://img.shields.io/github/downloads/tomcollis/Tempidoc/total.svg?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/releases/latest)
+[![GitHub forks](https://img.shields.io/github/forks/tomcollis/Tempidoc?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/forks)
 [![GitHub latest release version](https://img.shields.io/github/v/release/tomcollis/Tempidoc.svg?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/releases/latest)
 
 ## Overview
