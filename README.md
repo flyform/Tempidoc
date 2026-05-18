@@ -1,4 +1,5 @@
-# Doc Tools
+# Tempidoc
+*Pronounced:* **tem.pee.doc**
 
 [![GitHub stars](https://img.shields.io/github/stars/tomcollis/Tempidoc?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/tomcollis/Tempidoc?style=for-the-badge)](https://github.com/tomcollis/Tempidoc/issues)
