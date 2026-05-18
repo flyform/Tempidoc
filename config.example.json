@@ -1,0 +1,10 @@
+{
+  "brandName": "Your Brand Name",
+  "brandColor": "#171e60",
+  "fields": [
+    { "key": "AA_DocTitle", "label": "Project or Document Title", "type": "string" },
+    { "key": "AA_DocVer", "label": "Document Version", "type": "string" },
+    { "key": "AA_DocStat", "label": "Document Status", "type": "dropdown", "choices": ["Draft", "Submitted", "Approved", "Published", "Archived"] }
+  ],
+  "helpUrl": "https://github.com/tomcollis/Tempidoc"
+}

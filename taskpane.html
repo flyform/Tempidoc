@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tempidoc</title>
+  <!--
+  The script below is a lightweight, privacy‑first analytics ping.
+  Sends only:
+    - app name (hardcoded per app)
+    - a SHA-256 hash of the deployment URL (window.location.origin)
+    - timestamp (generated server‑side)
+  No personal data, no cookies, no document content.
+  The SHA-256 hash is one-way only, and lets me group deployments without storing real URLs.
+  This is purely used to understand whether the app is being used across forks/deployments.
+  This serves several purposes:
+    - helps justify continued investment/maintenace in the app
+    - helps identify which if there are popular deployments
+    - helps identify usage patterns (e.g. time of day, frequency)
+  -->
+  <script>
+    // This function computes a privacy‑safe SHA‑256 hash that uniquely identifies a deployment without revealing the URL.
+    async function hashOrigin() {
+      const data = new TextEncoder().encode(window.location.origin);
+      const digest = await crypto.subtle.digest("SHA-256", data);
+      return Array.from(new Uint8Array(digest))
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
+    }
+    (async () => {
+      const deploymentId = await hashOrigin();
+
+      fetch("https://app-analytics-r2p4tufdkt.tom-collis.workers.dev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          app: "tempidoc",   // Change this per app
+          deploymentId
+        })
+      });
+    })();
+  </script>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+
+<body>
+  <!-- Top brand bar -->
+  <header class="brand-bar" role="banner">
+    <div class="brand-inner">
+      <img class="brand-logo" src="assets/brand-logo.png" alt="logo" />
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" role="main">
+    <form id="fieldsForm" class="fields" autocomplete="off">
+      <!-- Fields will be dynamically generated here -->
+      <div class="actions">
+        <button type="button" id="btnSave" class="btn btn-primary">💾 Save</button>
+        <button type="button" id="btnReset" class="btn btn-secondary">🔄 Reset</button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <!-- Footer pinned to bottom of pane -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-links">
+      <a id="helpLink" data-external href="#" rel="noopener noreferrer">Help</a>
+      <span class="sep">•</span>
+      <a id="contribLink" data-external href="https://github.com/tomcollis/Tempidoc" rel="noopener noreferrer">Contributing</a>
+    </div>
+    <div class="footer-note">
+      Internal use only, © <span class="brandName">Placeholder</span>
+    </div>
+  </footer>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>
