@@ -42,15 +42,15 @@ If you like this idea or find the app useful, why not?
         - The height should be 35px, and it can be **up to** 160px wide.
     - Update Footer link for Contributing in footer-links to org specific URL in taskpane.html or remove it.
 4. Host your files
-    - The manifest.xml, taskpane.*, config.json and assets folder must be hosted and available globally.
+    - The taskpane.*, config.json and assets folder must be hosted and available globally.
     - You could use:
         - GitHub Pages
         - Cloudflare Pages
         - Docker with NGINX & Reverse Proxy
         - Docker with NGINX & Cloudflare Tunnel
         - Generic Web Hosting
-5. Update all URLs in **manifest.xml** to your new hosted files.
-6. Add your Addin to Microsoft Word (the complicated bit for easy to difficult).
+5. Download and update all URLs in **manifest.xml** to your new hosted files.
+6. Add your Addin using your downloaded, modified **manifest.xml** to Microsoft Word (the complicated bit, from easy to difficult).
     - **Word with Microsoft 365 Tenant**: If you have a Microsoft 365 tenant, then the process is pretty seamless, [Upload Custon Add-ins via the Microsoft 365 Admin Center](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/office-addins?view=o365-worldwide#upload-custom-office-add-ins-in-your-organization). The Add-in will then be available via the Desktop and Web apps.
     - **Word for the Web only**: If you don't have a Microsoft 365 tenant, you can [Upload the Add-in direct in Word for the Web](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing#manually-sideload-an-add-in-to-office-on-the-web).
     - **Word Desktop - Windows only**: [Create a network share and create a Trusted Add-in Catalog](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins).
