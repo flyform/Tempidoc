@@ -1,0 +1,14 @@
+{
+  "brandName": "FlyForm",
+  "brandColor": "#6100FF",
+  "fields": [
+    { "key": "AA_CustomerFull", "label": "Client Full Name", "type": "string" },
+    { "key": "AA_CustomerShort", "label": "Client Short Name", "type": "string" },
+    { "key": "AA_DocTitle", "label": "Project or Document Title", "type": "string" },
+    { "key": "AA_DocSubTitle", "label": "Document Subtitle", "type": "string" },
+    { "key": "AA_DocVer", "label": "Document Version", "type": "string" },
+    { "key": "AA_DocStat", "label": "Document Status", "type": "dropdown", "choices": ["Draft", "Submitted", "Approved", "Published", "Archived"] },
+    { "key": "AA_Classification", "label": "Document Classification", "type": "dropdown", "choices": ["Highly Confidential", "Confidential", "Public"] }
+  ],
+  "helpUrl": "https://go.flyform.com/support"
+}
