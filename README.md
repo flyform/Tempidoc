@@ -31,7 +31,7 @@ If you like this idea or find the app useful, why not?
 ## Getting Started
 
 1. Fork the main branch from the repository.
-2. Copy **config.example.json** to **config.json** and populate your settings:
+2. You need to define your settings in **config.json**, the easiest method is to edit **config.example.json** to **config.json** and populate your settings via the GitHub Website:
     - brandName: Used for Copyright footer.
     - brandColor: Use HTML colour code (to ensure legibility and accessibility choose a dark colour.)
     - helpUrl: Webpage for support, defaults to main GitHub repo issues.
